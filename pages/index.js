@@ -37,4 +37,16 @@ export default function Home() {
       <main style={{ padding: 20 }}>
         <h1>📸 PokéCatalog OCR</h1>
         <input type="file" accept="image/*" onChange={handleChange} />
-        {image && <img src={image} alt="Carta" style={{ maxWidth: '100%', marginTop:
+        {image && <img src={image} alt="Carta" style={{ maxWidth: '100%', marginTop: 20 }} />}
+        {loading && <p>⏳ Processando imagem...</p>}
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {text && (
+          <div style={{ marginTop: 20 }}>
+            <h2>📝 Texto Reconhecido:</h2>
+            <pre>{text}</pre>
+          </div>
+        )}
+      </main>
+    </div>
+  )
+}
