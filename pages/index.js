@@ -36,4 +36,5 @@ export default function Home() {
       </Head>
       <main style={{ padding: 20 }}>
         <h1>📸 PokéCatalog OCR</h1>
-        <input type="file" accept="image/*" onChange={handleChange} /*
+        <input type="file" accept="image/*" onChange={handleChange} />
+        {image && <img src={image} alt="Carta" style={{ maxWidth: '100%', marginTop:
